@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { COUNTRIES_API_URL } from "../../contents/apiUI";
+import { COUNTRIES_API_URL } from "../../constants/apiUrl";
 import { Icons } from "../../assets/icons";
 import axios from "axios";
 
@@ -40,16 +40,15 @@ const AppbarLang = () => {
           });
         }
 
-        // console.log(defaultCountryData);
+        // console.log(defaultCountry);
       } catch (error) {
-        console.log("Error fetching data:", error);
+        console.log("Error fetching data: ", error);
       }
     };
     fetchCountriesData();
   }, []);
 
   // console.log(selectedCountry);
-
   return (
     <div className="appbar-dropdown lang-dropdown w-30 h-10 relative">
       <div
@@ -63,6 +62,7 @@ const AppbarLang = () => {
             className="w-full h-full object-cover"
           />
         </div>
+
         <div className="drop-selected-text flex items-center gap-2">
           <span>{selectedCountry?.lang}</span>
           <img
@@ -88,7 +88,7 @@ const AppbarLang = () => {
                 return (
                   <div
                     key={country.name.common}
-                    className="drop-item flex items-center gap-3 hover:bg-slate-100 py-1 px-0 transition ease-in-out delay-300 hover:dark:bg-gray-700 cursor-pointer"
+                    className="drop-item flex items-center gap-3 hover:bg-slate-100 py-1 px-0 transition ease-in-out delay-100 hover:dark:bg-gray-700 cursor-pointer"
                     onClick={() => {
                       countrySelectedHandler(
                         country?.name?.common,

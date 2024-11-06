@@ -15,13 +15,13 @@ const AppbarProfile = () => {
         </div>
         <div className="drop-info-text">
           <div className="text-group flex flex-col min-w-20 mt-2 justify-center leading-4">
-            <span className="font-semibold overflow-hidden">Yoogyu</span>
-            <span className="text-sm text-gra-400">Admin</span>
+            <span className="font-semibold overflow-hidden">Marshall</span>
+            <span className="text-sm text-gray-400">Admin</span>
           </div>
         </div>
         <img
           src={Icons.ChevronDownDark}
-          className="w-5 h-5 dark:invert-[1] dark:brigntness-[100%]"
+          className="w-5 h-5 dark:invert-[1] dark:brightness-[100%]"
           alt=""
         />
       </div>

@@ -19,7 +19,7 @@ const ModeCtrl = () => {
       <img
         src={darkMode ? Icons.SunFill : Icons.MoonFill}
         alt=""
-        className="w-4 h-4 dark:invert-[1] dark:brightness-100%"
+        className="w-5 h-5 dark:invert-[1] dark:brightness-[100%]"
       />
     </button>
   );
